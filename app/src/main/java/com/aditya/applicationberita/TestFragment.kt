@@ -13,7 +13,7 @@ class TestFragment : Fragment() {
 
     private var _binding: FragmentTestBinding? = null
     private val binding get()= _binding!!
-    private lateinit var adapterFragment : AdapterFragment
+
 
 
     override fun onCreateView(
@@ -24,26 +24,8 @@ class TestFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        adapterFragment = AdapterFragment(this)
 
-        with(binding){
-            viewPager.adapter = adapterFragment
 
-            TabLayoutMediator(tabLayout, viewPager) {tab, position ->
-                when (position) {
-                    0 -> tab.text = "Berita Hari Ini"
-                    1 -> tab.text = "LIKE"
-                }
-            }.attach ()
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 
 
