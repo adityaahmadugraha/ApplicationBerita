@@ -22,7 +22,7 @@
                 android:id="@+id/img_news"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/top"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -32,20 +32,21 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="Detik.Com"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/img_news"
-                app:layout_constraintEnd_toEndOf="@+id/img_news"
-                app:layout_constraintStart_toStartOf="@+id/img_news" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/author"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
                 android:text="Pagi ini kaksandadakda"
                 android:textColor="@color/black"
                 android:textStyle="italic"
@@ -57,15 +58,18 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/tv_articles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Articles"
+                android:id="@+id/description"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toStartOf="@+id/img_news"
+                app:layout_constraintHorizontal_bias="0.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                app:layout_constraintVertical_bias="0.69" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

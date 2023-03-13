@@ -25,12 +25,14 @@ class AdapterNews(onclick: () -> Unit) : ListAdapter<Articles, AdapterNews.ViewH
         private val binding: ListNewsBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Articles)  {
-            binding.tvTitle.text = data.title.toString()
+            binding.title.text = data.title
+            binding.description.text = data.description
+            binding.author.text = data.author
             Glide.with(itemView.context)
                 .load(data.urlToImage)
-                .error(android.R.color.darker_gray)
+                .error(android.R.color.holo_green_dark)
                 .into(binding.imgNews)
-            binding.tvDescription.text = data.description.toString()
+
 
         }
 
