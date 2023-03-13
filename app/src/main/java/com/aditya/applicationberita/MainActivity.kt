@@ -10,14 +10,15 @@ import com.google.android.material.tabs.TabLayoutMediator
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var adapterFragment : AdapterFragment
+    private lateinit var adapterFragment: AdapterFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if(savedInstanceState == null){
+
+        if (savedInstanceState == null) {
             val fragment = TestFragment()
             supportFragmentManager.beginTransaction()
                 .add(R.id.fragmentaContainer, fragment, TestFragment::class.simpleName)
@@ -25,23 +26,23 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-            adapterFragment = AdapterFragment(this)
+        adapterFragment = AdapterFragment(this)
 
-            with(binding){
-                viewPager.adapter = adapterFragment
+        with(binding) {
+            viewPager.adapter = adapterFragment
 
-                TabLayoutMediator(tabLayout, viewPager) {tab, position ->
-                    when (position) {
-                        0 -> tab.text = "Berita Hari Ini"
-                        1 -> tab.text = "LIKE"
-                    }
-                }.attach ()
-            }
+            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "Berita Hari Ini"
+                    1 -> tab.text = "LIKE"
+                }
+            }.attach()
         }
-
-
-
     }
+
+
+
+}
 
 
 

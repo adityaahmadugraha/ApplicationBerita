@@ -16,15 +16,17 @@ class HomeViewModel : ViewModel() {
     val articles: LiveData<ServerRespons> = _articles
 
     private val _isLoading = MutableLiveData<Boolean>()
-    val isLoading: LiveData<Boolean> = _isLoading
+    val isLoading : LiveData<Boolean> = _isLoading
 
     init {
         getarticles()
     }
 
-    fun getarticles() {
+    fun getarticles(
+        id:String = "id"
+    ) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().getarticles()
+        val client = ApiConfig.getApiService().getarticles(id)
         client.enqueue(object : retrofit2.Callback<ServerRespons> {
             override fun onResponse(call: Call<ServerRespons>, response: Response<ServerRespons>) {
                 if (response.isSuccessful) {
@@ -42,4 +44,9 @@ class HomeViewModel : ViewModel() {
             }
         })
     }
+
+//    viewModel.isLoading.observe(context) { isLoading ->
+//
+//        binding.progressBar.isVisible = isLoading
+//    }
 }

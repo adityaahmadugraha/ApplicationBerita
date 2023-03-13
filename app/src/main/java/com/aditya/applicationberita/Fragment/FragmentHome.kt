@@ -1,6 +1,7 @@
 package com.aditya.applicationberita.Fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aditya.applicationberita.Adapter.AdapterFragment
 import com.aditya.applicationberita.Adapter.AdapterNews
 import com.aditya.applicationberita.Data.Articles
+import com.aditya.applicationberita.MainActivity
 import com.aditya.applicationberita.databinding.ActivityMainBinding
 import com.aditya.applicationberita.databinding.FragmentHomeBinding
 
@@ -55,15 +57,20 @@ getData()
     }
 
     private fun getData() {
+        viewModel.getarticles()
         viewModel.articles.observe(viewLifecycleOwner) {
-            mAdapter.submitList(it.article)
+            Log.d("Response::::::::::::::", "getData: $it")
+            mAdapter.submitList(it.articles)
             binding?.apply {
                 rvHome.adapter = mAdapter
                 rvHome.layoutManager = LinearLayoutManager(context)
                 rvHome.setHasFixedSize(true)
+
             }
         }
     }
+
+
 
 
 }
