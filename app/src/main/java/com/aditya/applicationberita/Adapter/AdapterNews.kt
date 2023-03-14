@@ -25,7 +25,7 @@ class AdapterNews(onclick: () -> Unit) : ListAdapter<Articles, AdapterNews.ViewH
         private val binding: ListNewsBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(data: Articles)  {
-            binding.tvTitle.text = data.description
+//            binding.tvTitle.text = data.description
             binding.description.text = data.title
             binding.author.text = data.author
             Glide.with(itemView.context)

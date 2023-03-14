@@ -39,49 +39,51 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:text="Detik.Com"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/img_news"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+<!--            <TextView-->
+<!--                android:id="@+id/tv_title"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:text="Detik.Com"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/img_news"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.0" />-->
 
             <TextView
                 android:id="@+id/author"
                 android:layout_width="200dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Pagi ini kaksandadakda"
                 android:textColor="@color/black"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/img_news"
-                app:layout_constraintVertical_bias="0.16000003" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="200dp"
                 android:layout_height="60dp"
+                android:layout_marginEnd="8dp"
                 android:text="deskripsi"
                 android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_news"
                 app:layout_constraintTop_toBottomOf="@+id/author"
-                app:layout_constraintVertical_bias="0.69" />
+                app:layout_constraintVertical_bias="0.19" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
