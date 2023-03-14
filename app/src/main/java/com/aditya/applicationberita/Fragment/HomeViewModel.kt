@@ -45,8 +45,4 @@ class HomeViewModel : ViewModel() {
         })
     }
 
-//    viewModel.isLoading.observe(context) { isLoading ->
-//
-//        binding.progressBar.isVisible = isLoading
-//    }
 }

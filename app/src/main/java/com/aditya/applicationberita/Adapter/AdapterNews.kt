@@ -33,7 +33,6 @@ class AdapterNews(onclick: () -> Unit) : ListAdapter<Articles, AdapterNews.ViewH
                 .error(android.R.color.holo_green_dark)
                 .into(binding.imgNews)
 
-
         }
 
     }
