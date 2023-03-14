@@ -32,9 +32,7 @@ class AdapterNews(onclick: () -> Unit) : ListAdapter<Articles, AdapterNews.ViewH
                 .load(data.urlToImage)
                 .error(android.R.color.holo_green_dark)
                 .into(binding.imgNews)
-
         }
-
     }
 
     companion object {

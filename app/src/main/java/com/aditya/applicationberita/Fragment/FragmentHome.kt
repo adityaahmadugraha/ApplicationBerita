@@ -8,12 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.aditya.applicationberita.Adapter.AdapterFragment
 import com.aditya.applicationberita.Adapter.AdapterNews
-import com.aditya.applicationberita.Data.Articles
-import com.aditya.applicationberita.MainActivity
-import com.aditya.applicationberita.databinding.ActivityMainBinding
 import com.aditya.applicationberita.databinding.FragmentHomeBinding
 
 

@@ -2,7 +2,6 @@ package com.aditya.applicationberita
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.aditya.applicationberita.Adapter.AdapterFragment
 import com.aditya.applicationberita.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator

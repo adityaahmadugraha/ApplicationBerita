@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.aditya.applicationberita.ApiConfig
-import com.aditya.applicationberita.Data.Articles
 import com.aditya.applicationberita.Data.ServerRespons
 import retrofit2.Call
 import retrofit2.Response
